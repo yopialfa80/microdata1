@@ -14,7 +14,7 @@ class AddTblInstansiSetting extends Migration
     public function up()
     {
         Schema::create('instansi_setting', function (Blueprint $table) {
-            $table->id();
+            $table->id()->unsigned(false);
             $table->integer('instansi_id')->index()->nullable();
             $table->string('nama_kepala', 200)->collation('latin1_swedish_ci')->nullable();
             $table->string('kabupaten', 200)->collation('latin1_swedish_ci')->nullable();

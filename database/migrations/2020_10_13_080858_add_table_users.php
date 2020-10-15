@@ -18,7 +18,7 @@ class AddTableUsers extends Migration
             $table->bigInteger('instansi_id');
             $table->string('name', 191)->collation('utf8mb4_unicode_ci');
             $table->string('username', 191)->collation('utf8mb4_unicode_ci');
-            $table->string('email', 191)->collation('utf8mb4_unicode_ci')->index();
+            $table->string('email', 191)->collation('utf8mb4_unicode_ci')->unique();
             $table->text('address')->collation('utf8mb4_unicode_ci')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('hak_akses', 50)->collation('utf8mb4_unicode_ci')->nullable();

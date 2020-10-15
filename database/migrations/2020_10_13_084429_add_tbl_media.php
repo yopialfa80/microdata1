@@ -14,7 +14,7 @@ class AddTblMedia extends Migration
     public function up()
     {
         Schema::create('media', function (Blueprint $table) {
-            $table->id();
+            $table->id()->unsigned(false);
             $table->string('judul_media', 200)->collation('latin1_swedish_ci')->nullable();
             $table->string('judul_img', 200)->collation('latin1_swedish_ci')->nullable();
             $table->text('img')->collation('latin1_swedish_ci')->nullable();

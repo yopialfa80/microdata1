@@ -14,7 +14,7 @@ class AddTblArtikel extends Migration
     public function up()
     {
         Schema::create('artikels', function (Blueprint $table) {
-            $table->id();
+            $table->id()->unsigned(false);
             $table->integer('user_id');
             $table->integer('kategori_id');
             $table->integer('headlines');

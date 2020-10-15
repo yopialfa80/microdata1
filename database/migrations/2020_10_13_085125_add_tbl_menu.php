@@ -14,7 +14,7 @@ class AddTblMenu extends Migration
     public function up()
     {
         Schema::create('menu', function (Blueprint $table) {
-            $table->id();
+            $table->id()->unsigned(false);
             $table->bigInteger('instansi_id')->index();
             $table->integer('id_parent')->collation('latin1_swedish_ci');
             $table->string('nama_menu', 30)->collation('latin1_swedish_ci');

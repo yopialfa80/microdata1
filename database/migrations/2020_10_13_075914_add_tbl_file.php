@@ -14,7 +14,7 @@ class AddTblFile extends Migration
     public function up()
     {
         Schema::create('file', function (Blueprint $table) {
-            $table->id();
+            $table->id()->unsigned(false);
             $table->string('judul_file', 500)->collation('latin1_swedish_ci');
             $table->string('nama_file', 500)->collation('latin1_swedish_ci');
             $table->string('type_file', 20)->collation('latin1_swedish_ci');

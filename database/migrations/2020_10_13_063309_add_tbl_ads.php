@@ -14,7 +14,7 @@ class AddTblAds extends Migration
     public function up()
     {
         Schema::create('ads', function (Blueprint $table) {
-            $table->id();
+            $table->id()->unsigned(false);
             $table->string('posisi', 100);
             $table->string('link', 200)->nullable();
             $table->text('keterangan')->nullable();
